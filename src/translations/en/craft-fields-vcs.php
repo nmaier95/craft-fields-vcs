@@ -22,5 +22,6 @@
  */
 return [
     'craft-fields-vcs plugin loaded' => 'craft-fields-vcs plugin loaded',
-    'Panel' => 'Panel'
+    'Panel' => 'Panel',
+    'cp-label' => 'VCS Fields'
 ];

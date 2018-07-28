@@ -47,7 +47,7 @@ class DefaultController extends Controller
      *         The actions must be in 'kebab-case'
      * @access protected
      */
-    protected $allowAnonymous = ['index', 'register-template'];
+    protected $allowAnonymous = ['index', 'cp-template'];
 
     // Public Methods
     // =========================================================================
@@ -73,10 +73,10 @@ class DefaultController extends Controller
      * @throws \Twig_Error_Loader
      * @throws \yii\base\Exception
      */
-    public function actionRegisterTemplate()
+    public function actionCpTemplate()
     {
         $success = Craft::$app->getRequest()->getQueryParam('success') === 'true' ? true : false;
-        return $this->renderTemplate('craft-fields-vcs/index', [
+        return $this->renderTemplate('craft-fields-vcs/_index', [
             'success' => $success
         ]);
     }

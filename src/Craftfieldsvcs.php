@@ -98,7 +98,7 @@ class Craftfieldsvcs extends Plugin
             UrlManager::EVENT_REGISTER_CP_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
                 $event->rules['cpActionTrigger1'] = 'craft-fields-vcs/default/do-something';
-                $event->rules['fieldsvcs'] = 'craft-fields-vcs/default/register-template';
+                $event->rules['fieldsvcs'] = 'craft-fields-vcs/default/cp-template';
                 $event->rules['exportfields'] = 'craft-fields-vcs/default/export';
             }
         );
@@ -109,7 +109,7 @@ class Craftfieldsvcs extends Plugin
             Cp::EVENT_REGISTER_CP_NAV_ITEMS,
             function(RegisterCpNavItemsEvent $event){
                 $event->navItems[] = [
-                    'label' => 'Export fields',
+                    'label' => Craft::t('craft-fields-vcs', 'cp-label'),
                     'url' => '/admin/fieldsvcs',
                     'fonticon' => 'gauge'
                 ];
