@@ -8,9 +8,10 @@
  * @copyright Copyright (c) 2018 Niklas Maier
  */
 
-namespace nmaier95craftfieldsvcs\craftfieldsvcs\controllers;
+namespace nmaier95\craftfieldsvcs\controllers;
 
-use nmaier95craftfieldsvcs\craftfieldsvcs\Craftfieldsvcs;
+use craft\records\Field;
+use nmaier95\craftfieldsvcs\Craftfieldsvcs;
 
 use Craft;
 use craft\web\Controller;
@@ -46,7 +47,7 @@ class DefaultController extends Controller
      *         The actions must be in 'kebab-case'
      * @access protected
      */
-    protected $allowAnonymous = ['index', 'do-something'];
+    protected $allowAnonymous = ['index', 'register-template'];
 
     // Public Methods
     // =========================================================================
@@ -68,12 +69,22 @@ class DefaultController extends Controller
      * Handle a request going to our plugin's actionDoSomething URL,
      * e.g.: actions/craft-fields-vcs/default/do-something
      *
-     * @return mixed
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \yii\base\Exception
      */
-    public function actionDoSomething()
+    public function actionRegisterTemplate()
     {
-        $result = 'Welcome to the DefaultController actionDoSomething() method';
+        $success = Craft::$app->getRequest()->getQueryParam('success') === 'true' ? true : false;
+        return $this->renderTemplate('craft-fields-vcs/index', [
+            'success' => $success
+        ]);
+    }
 
-        return $result;
+
+    public function actionExport() {
+        $fields = Field::find()->all();
+
+        return $this->redirect('/admin/fieldsvcs?success=true');
     }
 }
