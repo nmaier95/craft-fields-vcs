@@ -21,6 +21,5 @@
  * @since     1.0.0
  */
 return [
-    'craft-fields-vcs plugin loaded' => 'craft-fields-vcs plugin loaded',
-    'Panel' => 'Panel'
+    'craft-fields-vcs plugin loaded' => 'craft-fields-vcs plugin loaded'
 ];
