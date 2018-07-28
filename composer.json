@@ -1,5 +1,5 @@
 {
-    "name": "nmaier95craftfieldsvcs/craft-fields-vcs",
+    "name": "nmaier95/craft-fields-vcs",
     "description": "Export fields as json to get them into your vcs of choice.  Import them into your cms instance as well.",
     "type": "craft-plugin",
     "version": "1.0.0",
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-          "nmaier95craftfieldsvcs\\craftfieldsvcs\\": "src/"
+          "nmaier95\\craftfieldsvcs\\": "src/"
         }
     },
     "extra": {
@@ -35,6 +35,6 @@
         "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/nmaier95/craft-fields-vcs/master/CHANGELOG.md",
-        "class": "nmaier95craftfieldsvcs\\craftfieldsvcs\\Craftfieldsvcs"
+        "class": "nmaier95\\craftfieldsvcs\\Craftfieldsvcs"
     }
 }
