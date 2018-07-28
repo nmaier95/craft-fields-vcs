@@ -1,0 +1,10 @@
+{% extends "_layouts/cp" %}
+{% set title = "Panel"|t %}
+
+{% block content %}
+    <a href="/admin/exportfields" class="btn submit">AWESOME</a>
+
+    {% if success == true %}
+        Successfully exported
+    {% endif %}
+{% endblock %}
