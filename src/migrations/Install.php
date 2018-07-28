@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2018 Niklas Maier
  */
 
-namespace nmaier95craftfieldsvcs\craftfieldsvcs\migrations;
+namespace nmaier95\craftfieldsvcs\migrations;
 
-use nmaier95craftfieldsvcs\craftfieldsvcs\Craftfieldsvcs;
+use nmaier95\craftfieldsvcs\Craftfieldsvcs;
 
 use Craft;
 use craft\config\DbConfig;

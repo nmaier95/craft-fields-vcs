@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2018 Niklas Maier
  */
 
-namespace nmaier95craftfieldsvcs\craftfieldsvcs\records;
+namespace nmaier95\craftfieldsvcs\records;
 
-use nmaier95craftfieldsvcs\craftfieldsvcs\Craftfieldsvcs;
+use nmaier95\craftfieldsvcs\Craftfieldsvcs;
 
 use Craft;
 use craft\db\ActiveRecord;
